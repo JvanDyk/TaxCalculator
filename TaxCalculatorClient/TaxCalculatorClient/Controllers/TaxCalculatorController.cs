@@ -38,7 +38,6 @@ namespace TaxCalculatorClient.Controllers
                 return View("Index", taxCalculator);
             }
             taxCalculator.Calculate();
-            //ViewBag.TaxPayable = taxCalculator.TaxPayable;
 
             await _taxCalculatorTransporter.PersistAsync(taxCalculator);
 
